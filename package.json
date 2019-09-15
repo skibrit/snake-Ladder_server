@@ -1,0 +1,17 @@
+{
+  "name": "snake_ladder",
+  "version": "1.0.0",
+  "description": "the server of snake ladder game",
+  "main": "server.js",
+  "scripts": {
+    "start":"nodemon --config config/nodemon.config start server.js"
+  },
+  "author": "Saidul Amin",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.2.2",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.2",
+    "socket.io": "^2.2.0"
+  }
+}
