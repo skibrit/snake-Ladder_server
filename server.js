@@ -1,8 +1,9 @@
 const http = require("http");
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 5500;
 const SocketManager = require("./models/SocketManager");
+const MatchManager = require("./models/MatchManager");
 
 const server = http.createServer(app);
 
@@ -14,6 +15,8 @@ app.get("/",(req,res)=>{
 
 //pass the io
 SocketManager(io);
+
+MatchManager();
 
 server.listen(PORT,()=>{
     console.log(`Server is listening to Port ${PORT}`);
