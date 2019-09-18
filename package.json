@@ -4,7 +4,8 @@
   "description": "the server of snake ladder game",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon --config config/nodemon.config --inspect server.js"
+    "debug": "nodemon --config config/nodemon.config --inspect server.js",
+    "start": "nodemon --config config/nodemon.config start server.js"
   },
   "author": "Saidul Amin",
   "license": "ISC",

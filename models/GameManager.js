@@ -16,7 +16,9 @@ class GameManager{
         for(const {id} of otherPlayers){
             let pl = playerList[id];
             if(pl && pl.Socket){
-                pl.Socket.emit("positionUpdate",{...payload,nextTurn:match.WhoseTurn,updateOf:ID,updateIndex:player.MatchIndex});
+                const obj = {...payload,nextTurn:match.WhoseTurn,updateOf:ID,updateIndex:player.MatchIndex};
+                console.log(JSON.stringify(obj));
+                pl.Socket.emit("positionUpdate",obj);
             }
         }
 
